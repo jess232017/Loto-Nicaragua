@@ -48,14 +48,75 @@ h2::before{
     color: #2b2a2a;
 }
 .bg-info {
-    background-color: #0dcaf0!important;
+    background-color: #6D2C8A!important;
 }
 .bg-primary {
-    background-color: #008cff!important;
+    background-color: #6bb55f!important;
+    background-image: linear-gradient(150deg, #3fac4f 22%, transparent 19%), linear-gradient(28deg, #4aae44 10%, transparent 10%),
+    linear-gradient(330deg, #52B34C 30%, transparent 30%);
 }
 .bg-danger {
     background-color: #fd3550!important;
 }
 .bg-warning {
-    background-color: #ffc107!important;
+    background-color: #008cff!important;
+}
+
+
+.stage {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    perspective: 1200px;
+    perspective-origin: 50% 50%;
+}
+
+.ball {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 50%;
+    position: relative;
+    background: radial-gradient(circle at 50% 120%, #E5A213, #FEC309 10%, #F5AF12 80%, #FFDC13 100%);
+}
+
+.ball:before {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 25% 30px, #ffffff, rgba(255, 255, 255, 0) 58%);
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    z-index: 2;
+}
+  
+.ball .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+    -webkit-transform: rotateX(90deg) translateZ(-150px);
+    -moz-transform: rotateX(90deg) translateZ(-150px);
+    -ms-transform: rotateX(90deg) translateZ(-150px);
+    -o-transform: rotateX(90deg) translateZ(-150px);
+    transform: rotateX(90deg) translateZ(-150px);
+    z-index: -1;
+}
+
+.ball .number{
+    position: absolute;
+    font-weight: 900;
+    font-size: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 50px;
+    z-index: 2;
 }
