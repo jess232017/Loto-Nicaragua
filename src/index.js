@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import * as serviceWorker from './serviceWorker';
 
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
@@ -16,3 +17,5 @@ ReactDOM.render(
     </React.StrictMode>,
     document.getElementById('root')
 );
+
+serviceWorker.register();

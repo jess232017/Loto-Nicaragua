@@ -58,19 +58,27 @@ h2::before{
 }
 .bg-info {
     background-color: #6D2C8A!important;
+    background-image: linear-gradient(150deg, #671e87 22%, transparent 26%), linear-gradient(28deg, #8433a9 10%, transparent 14%),
+    linear-gradient(330deg, #7b27a1 30%, transparent 34%);
 }
+
 .bg-primary {
     background-color: #6bb55f!important;
-    background-image: linear-gradient(150deg, #3fac4f 22%, transparent 19%), linear-gradient(28deg, #4aae44 10%, transparent 10%),
-    linear-gradient(330deg, #52B34C 30%, transparent 30%);
+    background-image: linear-gradient(150deg, #3fac4f 22%, transparent 26%), linear-gradient(28deg, #4aae44 10%, transparent 14%),
+    linear-gradient(330deg, #52B34C 30%, transparent 34%);
 }
 .bg-danger {
     background-color: #fd3550!important;
+    background-image: linear-gradient(150deg, #e33e54 22%, transparent 26%), linear-gradient(28deg, #e9455b 10%, transparent 14%), 
+    linear-gradient(330deg, #ff3f59 30%, transparent 34%);
 }
 .bg-warning {
     background-color: #008cff!important;
+    background-image: linear-gradient(150deg, #0080ea 22%, transparent 26%), linear-gradient(28deg, #1393fd 10%, transparent 14%),
+    linear-gradient(330deg, #1084e3 30%, transparent 34%);
 }
 
+/***************************/
 
 .stage {
     width: 150px;
@@ -103,9 +111,12 @@ h2::before{
     filter: blur(5px);
     z-index: 2;
 }
+
   
-.ball .shadow {
+.ball .ball-shadow {
     position: absolute;
+    left: 0px;
+    top: -65px;
     width: 100%;
     height: 100%;
     background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
@@ -113,7 +124,7 @@ h2::before{
     -moz-transform: rotateX(90deg) translateZ(-150px);
     -ms-transform: rotateX(90deg) translateZ(-150px);
     -o-transform: rotateX(90deg) translateZ(-150px);
-    transform: rotateX(90deg) translateZ(-150px);
+    transform: rotateX(96deg) translateZ(-150px);
     z-index: -1;
 }
 
