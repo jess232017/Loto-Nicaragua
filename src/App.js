@@ -79,7 +79,7 @@ const App = () =>{
                         : isError ?
                             <p>{JSON.stringify(error)}</p>
                         :
-                            data?.resultado[1].map( value => (
+                            data?.resultado[2].map( value => (
                                 <LotoCard key={value?.Hora}
                                     dia={value?.Día}
                                     hora={value?.Hora}
@@ -103,7 +103,7 @@ const App = () =>{
                         : isError ?
                             <p>{JSON.stringify(error)}</p>
                         :
-                            data?.resultado[1].map( value => (
+                            data?.resultado[3].map( value => (
                                 <LotoCard key={value?.Hora}
                                     dia={value?.Día}
                                     hora={value?.Hora}
