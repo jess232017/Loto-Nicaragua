@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 
 import { useQuery } from 'react-query';
 import NextGame from './components/NextGame';
+import LotoSkeleton from './components/LotoSkeleton';
 
 const App = () =>{
     const { isLoading, isError, error, data } = useQuery("repoData", () =>
@@ -18,11 +19,15 @@ const App = () =>{
             <div className="page-nav bg-greyblue pt-lg--5 pb-lg--5 pb-2 pt-2">
                 <NextGame/>
 
-                <div className="container text-center mt-4 pt-4">
+                <div id="diaria" className="container text-center mt-4 pt-4">
                     <h1 class="fw-400 font-lg mb-4 pb-4">Loto <b>Diaria</b></h1>
                     <div className="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
                         { isLoading ?
-                            <p>Cargando...</p>
+                            <>
+                                <LotoSkeleton/>
+                                <LotoSkeleton/>
+                                <LotoSkeleton/>
+                            </>
                         : isError ?
                             <p>{JSON.stringify(error)}</p>
                         :
@@ -38,11 +43,15 @@ const App = () =>{
                     </div>
                 </div>
 
-                <div className="container text-center mt-4 pt-4">
+                <div id="fecha" className="container text-center mt-4 pt-4">
                     <h1 class="fw-400 font-lg mb-4 pb-4"><b>Fechas</b></h1>
                     <div className="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
                         { isLoading ?
-                            <p>Cargando...</p>
+                            <>
+                                <LotoSkeleton/>
+                                <LotoSkeleton/>
+                                <LotoSkeleton/>
+                            </>
                         : isError ?
                             <p>{JSON.stringify(error)}</p>
                         :
@@ -58,11 +67,15 @@ const App = () =>{
                     </div>
                 </div>
 
-                <div className="container text-center mt-4 pt-4">
+                <div id="juga3" className="container text-center mt-4 pt-4">
                     <h1 class="fw-400 font-lg mb-4 pb-4"><b>Jugá 3</b></h1>
                     <div className="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
                         { isLoading ?
-                            <p>Cargando...</p>
+                            <>
+                                <LotoSkeleton/>
+                                <LotoSkeleton/>
+                                <LotoSkeleton/>
+                            </>
                         : isError ?
                             <p>{JSON.stringify(error)}</p>
                         :
@@ -78,11 +91,15 @@ const App = () =>{
                     </div>
                 </div>
 
-                <div className="container text-center mt-4 pt-4">
+                <div id="premia2" className="container text-center mt-4 pt-4">
                     <h1 class="fw-400 font-lg mb-4 pb-4"><b>Premia 2</b></h1>
                     <div className="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
                         { isLoading ?
-                            <p>Cargando...</p>
+                            <>
+                                <LotoSkeleton/>
+                                <LotoSkeleton/>
+                                <LotoSkeleton/>
+                            </>
                         : isError ?
                             <p>{JSON.stringify(error)}</p>
                         :

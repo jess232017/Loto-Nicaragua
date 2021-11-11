@@ -17,21 +17,21 @@ const CountDown = () => {
 
     return ( 
         <div className={`timer ${isNarrowWidth && "bg-white mt-2 mb-0 w350 rounded-lg"}`}>
-            <div className="timer mt-4 mb-2">
+            <div className="timer">
                 <div className="time-count">
-                    <span className="text-time">{days.toString().padStart(2, "0")}</span>
+                    <span className="text-time d-flex">{days.toString().padStart(2, "0")}</span>
                     <span className="text-day">Dias</span>
                 </div>
                 <div className="time-count">
-                    <span className="text-time">{hours.toString().padStart(2, "0")}</span>
+                    <span className="text-time d-flex">{hours.toString().padStart(2, "0")}</span>
                     <span className="text-day">Horas</span>
                 </div>
                 <div className="time-count">
-                    <span className="text-time">{minutes.toString().padStart(2, "0")}</span>
+                    <span className="text-time d-flex">{minutes.toString().padStart(2, "0")}</span>
                     <span className="text-day">Min</span>
                 </div>
                 <div className="time-count">
-                    <span className="text-time">{seconds.toString().padStart(2, "0")}</span>
+                    <span className="text-time d-flex">{seconds.toString().padStart(2, "0")}</span>
                     <span className="text-day">Seg</span>
                 </div>
             </div>
