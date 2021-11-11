@@ -14,10 +14,8 @@ const LotoCard = ({color, dia, hora, numero}) => {
                             </figure>
                         </section>
 
-                        <h5 className="mb-3 mt-2 text-white">
-                            {dia}
-                        </h5>
-                        <p className="mb-0 text-white">
+                        <h2 className="font-xs fw-700 mt-3 mb-3 text-white">{dia}</h2>
+                        <p className="mb-0 text-white fw-600">
                             {hora}
                         </p>
                     </div>

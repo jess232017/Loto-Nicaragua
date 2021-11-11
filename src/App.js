@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 import { useQuery } from 'react-query';
+import NextGame from './components/NextGame';
 
 const App = () =>{
     const { isLoading, isError, error, data } = useQuery("repoData", () =>
@@ -13,78 +14,88 @@ const App = () =>{
     return (
         <>
             <Header/>
-            <div className="container content">
-                <h1>Loto Nicaragua</h1>
-                <h2 id="diaria">Loto Diaria</h2>
-                <div className="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
-                    { isLoading ?
-                        <p>Cargando...</p>
-                    : isError ?
-                        <p>{JSON.stringify(error)}</p>
-                    :
-                        data?.resultado[0].map( value => (
-                            <LotoCard key={value?.Hora}
-                                dia={value?.Día}
-                                hora={value?.Hora}
-                                numero={value?.["Número Ganador"]}
-                                color="primary"
-                            />
-                        ))
-                    }
-                </div>
-                
-                <h2 id="fecha">Fechas</h2>
-                <div className="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
-                    { isLoading ?
-                        <p>Cargando...</p>
-                    : isError ?
-                        <p>{JSON.stringify(error)}</p>
-                    :
-                        data?.resultado[1].map( value => (
-                            <LotoCard key={value?.Hora}
-                                dia={value?.Día}
-                                hora={value?.Hora}
-                                numero={value?.["Número Ganador"]}
-                                color="danger"
-                            />
-                        ))
-                    }
+
+            <div className="page-nav bg-greyblue pt-lg--5 pb-lg--5 pb-2 pt-2">
+                <NextGame/>
+
+                <div className="container text-center mt-4 pt-4">
+                    <h1 class="fw-400 font-lg mb-4 pb-4">Loto <b>Diaria</b></h1>
+                    <div className="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
+                        { isLoading ?
+                            <p>Cargando...</p>
+                        : isError ?
+                            <p>{JSON.stringify(error)}</p>
+                        :
+                            data?.resultado[0].map( value => (
+                                <LotoCard key={value?.Hora}
+                                    dia={value?.Día}
+                                    hora={value?.Hora}
+                                    numero={value?.["Número Ganador"]}
+                                    color="primary"
+                                />
+                            ))
+                        }
+                    </div>
                 </div>
 
-                <h2 id="juga">Jugá 3</h2>
-                <div className="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
-                    { isLoading ?
-                        <p>Cargando...</p>
-                    : isError ?
-                        <p>{JSON.stringify(error)}</p>
-                    :
-                        data?.resultado[2].map( value => (
-                            <LotoCard key={value?.Hora}
-                                dia={value?.Día}
-                                hora={value?.Hora}
-                                numero={value?.["Número Ganador"]}
-                                color="warning"
-                            />
-                        ))
-                    }
+                <div className="container text-center mt-4 pt-4">
+                    <h1 class="fw-400 font-lg mb-4 pb-4"><b>Fechas</b></h1>
+                    <div className="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
+                        { isLoading ?
+                            <p>Cargando...</p>
+                        : isError ?
+                            <p>{JSON.stringify(error)}</p>
+                        :
+                            data?.resultado[1].map( value => (
+                                <LotoCard key={value?.Hora}
+                                    dia={value?.Día}
+                                    hora={value?.Hora}
+                                    numero={value?.["Número Ganador"]}
+                                    color="danger"
+                                />
+                            ))
+                        }
+                    </div>
                 </div>
 
-                <h2 id="premia">Premia 2</h2>
-                <div className="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
-                    { isLoading ?
-                        <p>Cargando...</p>
-                    : isError ?
-                        <p>{JSON.stringify(error)}</p>
-                    :
-                        data?.resultado[3].map( value => (
-                            <LotoCard key={value?.Hora}
-                                dia={value?.Día}
-                                hora={value?.Hora}
-                                numero={value?.["Número Ganador"]}
-                                color="info"
-                            />
-                        ))
-                    }
+                <div className="container text-center mt-4 pt-4">
+                    <h1 class="fw-400 font-lg mb-4 pb-4"><b>Jugá 3</b></h1>
+                    <div className="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
+                        { isLoading ?
+                            <p>Cargando...</p>
+                        : isError ?
+                            <p>{JSON.stringify(error)}</p>
+                        :
+                            data?.resultado[1].map( value => (
+                                <LotoCard key={value?.Hora}
+                                    dia={value?.Día}
+                                    hora={value?.Hora}
+                                    numero={value?.["Número Ganador"]}
+                                    color="warning"
+                                />
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <div className="container text-center mt-4 pt-4">
+                    <h1 class="fw-400 font-lg mb-4 pb-4"><b>Premia 2</b></h1>
+                    <div className="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
+                        { isLoading ?
+                            <p>Cargando...</p>
+                        : isError ?
+                            <p>{JSON.stringify(error)}</p>
+                        :
+                            data?.resultado[1].map( value => (
+                                <LotoCard key={value?.Hora}
+                                    dia={value?.Día}
+                                    hora={value?.Hora}
+                                    numero={value?.["Número Ganador"]}
+                                    color="info"
+                                />
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
             <Footer/>
