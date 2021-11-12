@@ -16,26 +16,32 @@
     border-radius: 50%;
     color: #2b2a2a;
 }
+
 .bg-info {
-    background-color: #6D2C8A!important;
-    background-image: linear-gradient(150deg, #671e87 22%, transparent 26%), linear-gradient(28deg, #8433a9 10%, transparent 14%),
-    linear-gradient(330deg, #7b27a1 30%, transparent 34%);
+    /*background-color: #6D2C8A!important;
+    background-image: linear-gradient(150deg, #671e87 22%, transparent 26%), linear-gradient(28deg, #6a1d8d 10%, transparent 14%),
+    linear-gradient(330deg, #6c2c89 30%, transparent 34%);*/
+    background-image: linear-gradient( 91.7deg,  rgba(50,25,79,1) -4.3%, #671e87  101.8% );
 }
 
-.bg-primary {
-    background-color: #6bb55f!important;
-    background-image: linear-gradient(150deg, #3fac4f 22%, transparent 26%), linear-gradient(28deg, #4aae44 10%, transparent 14%),
-    linear-gradient(330deg, #52B34C 30%, transparent 34%);
+.bg-success {
+    /*background-color: #6bb55f!important;
+    background-image: linear-gradient(150deg, #3fac4f 22%, transparent 26%), linear-gradient(28deg, #4aae44 10%, transparent 14%),    linear-gradient(330deg, #6bb55f 30%, transparent 34%);
+*/
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, #3cb57a 90% );
 }
+
 .bg-danger {
-    background-color: #fd3550!important;
+   /* background-color: #fd3550!important;
     background-image: linear-gradient(150deg, #e33e54 22%, transparent 26%), linear-gradient(28deg, #e9455b 10%, transparent 14%), 
-    linear-gradient(330deg, #ff3f59 30%, transparent 34%);
+    linear-gradient(330deg, #ff3f59 30%, transparent 34%);*/
+    background: linear-gradient(to right,#ee0979,#ff6a00)!important
 }
-.bg-warning {
-    background-color: #008cff!important;
+.bg-secondary {
+    /*background-color: #008cff!important;
     background-image: linear-gradient(150deg, #0080ea 22%, transparent 26%), linear-gradient(28deg, #1393fd 10%, transparent 14%),
-    linear-gradient(330deg, #1084e3 30%, transparent 34%);
+    linear-gradient(330deg, #1084e3 30%, transparent 34%);*/
+    background-image: linear-gradient(to top, #236de3 0%, #005bea 100%);
 }
 
 /***************************/
@@ -102,3 +108,77 @@
     top: 50px;
     z-index: 2;
 }
+
+/**/
+@keyframes move-eye-skew {
+    0% {
+      transform: none;
+    }
+    20% {
+      transform: translateX(-30px) translateY(30px) skewX(15deg) skewY(-10deg) scale(0.95);
+    }
+    25%, 44% {
+      transform: none;
+    }
+    50%, 60% {
+      transform: translateX(30px) translateY(-20px) skewX(5deg) skewY(2deg) scaleX(0.95);
+    }
+    66%, 100% {
+      transform: none;
+    }
+}
+  
+.ball.white {
+    background: radial-gradient(circle at 50% 40%, #fcfcfc, #efeff1 66%, #9b5050 100%);
+}
+
+.ball.white:after {
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 14%, rgba(255, 255, 255, 0) 24%);
+    transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+}
+  
+.iris {
+    left: 0;
+    width: 40%;
+    height: 40%;
+    margin: 30%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%, #208ab4 0%, #6fbfff 30%, #4381b2 100%);
+    transform: translateX(30px) translateY(-60px) skewX(15deg) skewY(2deg);
+    position: absolute;
+    animation: move-eye-skew 5s ease-out infinite;
+}
+
+.iris:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 37.5%;
+    height: 37.5%;
+    border-radius: 50%;
+    top: 31.25%;
+    left: 31.25%;
+    background: black;
+}
+
+.iris:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 31.25%;
+    height: 31.25%;
+    border-radius: 50%;
+    top: 18.75%;
+    left: 18.75%;
+    background: rgba(255, 255, 255, 0.2);
+}
+  
+.ball .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+    transform: rotateX(90deg) translateZ(-150px);
+        z-index: -1;
+}
+  

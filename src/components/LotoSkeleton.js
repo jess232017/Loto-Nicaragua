@@ -8,8 +8,9 @@ const LotoSkeleton = () => {
             <div className="card mb-2 radius-15">
                 <div className="card-body text-center">
                     <div className="p-4 radius-15">
-                        <section className="stage">
-                            <Skeleton style={{height: '100%'}} circle={true}/>
+                        <section className="stage mb-2">
+                            <Skeleton style={{height: '100%'}} circle={true}>
+                            </Skeleton>
                         </section>
 
                         <h2 className="font-xs fw-700 mt-3 mb-3 text-white"><Skeleton /> </h2>

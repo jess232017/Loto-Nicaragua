@@ -6,10 +6,10 @@ const LotoCard = ({color, dia, hora, numero}) => {
             <div className={`card mb-2 radius-15 bg-${color}`}>
                 <div className="card-body text-center">
                     <div className="p-4 radius-15">
-                        
                         <section className="stage">
                             <figure className="ball">
                                 <span className="number">{numero}</span>
+                                {/*<span className="iris"></span> */}
                                 <span className="ball-shadow"></span>
                             </figure>
                         </section>

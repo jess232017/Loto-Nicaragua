@@ -7,9 +7,11 @@ import { useQuery } from 'react-query';
 import NextGame from './components/NextGame';
 import LotoSkeleton from './components/LotoSkeleton';
 
+const URL = "https://loto-nic.herokuapp.com";
+
 const App = () =>{
     const { isLoading, isError, error, data } = useQuery("repoData", () =>
-        fetch("https://loto-nic.herokuapp.com/obtener-todos").then((res) => res.json())
+        fetch(URL + "/obtener-todos").then((res) => res.json())
     );
 
     return (
@@ -20,7 +22,7 @@ const App = () =>{
                 <NextGame/>
 
                 <div id="diaria" className="container text-center mt-4 pt-4">
-                    <h1 class="fw-400 font-lg mb-4 pb-4">Loto <b>Diaria</b></h1>
+                    <h1 className="fw-400 font-lg mb-4 pb-4">Loto <b>Diaria</b></h1>
                     <div className="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
                         { isLoading ?
                             <>
@@ -36,7 +38,7 @@ const App = () =>{
                                     dia={value?.Día}
                                     hora={value?.Hora}
                                     numero={value?.["Número Ganador"]}
-                                    color="primary"
+                                    color="success"
                                 />
                             ))
                         }
@@ -44,7 +46,7 @@ const App = () =>{
                 </div>
 
                 <div id="fecha" className="container text-center mt-4 pt-4">
-                    <h1 class="fw-400 font-lg mb-4 pb-4"><b>Fechas</b></h1>
+                    <h1 className="fw-400 font-lg mb-4 pb-4">Loto <b>Fechas</b></h1>
                     <div className="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
                         { isLoading ?
                             <>
@@ -68,7 +70,7 @@ const App = () =>{
                 </div>
 
                 <div id="juga3" className="container text-center mt-4 pt-4">
-                    <h1 class="fw-400 font-lg mb-4 pb-4"><b>Jugá 3</b></h1>
+                    <h1 className="fw-400 font-lg mb-4 pb-4">Loto <b>Jugá 3</b></h1>
                     <div className="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
                         { isLoading ?
                             <>
@@ -84,7 +86,7 @@ const App = () =>{
                                     dia={value?.Día}
                                     hora={value?.Hora}
                                     numero={value?.["Número Ganador"]}
-                                    color="warning"
+                                    color="secondary"
                                 />
                             ))
                         }
@@ -92,7 +94,7 @@ const App = () =>{
                 </div>
 
                 <div id="premia2" className="container text-center mt-4 pt-4">
-                    <h1 class="fw-400 font-lg mb-4 pb-4"><b>Premia 2</b></h1>
+                    <h1 className="fw-400 font-lg mb-4 pb-4">Loto <b>Premia 2</b></h1>
                     <div className="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
                         { isLoading ?
                             <>

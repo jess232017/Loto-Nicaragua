@@ -1,5 +1,4 @@
 import React from 'react'
-import { ChevronDown } from 'react-feather';
 
 const Header = () => {
     return ( 

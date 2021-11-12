@@ -18,27 +18,27 @@ const Footer = () => {
                     <div className="col-sm-6 text-left">
                         <ul className="d-flex align-items-center mt-2 float-left xs-mb-2">
                         <li className="mr-2">
-                            <a href="#" className="btn-round-md bg-facebook">
+                            <a href="#Facebook" className="btn-round-md bg-facebook">
                                 <Facebook className="font-xs text-white"/>
                             </a>
                         </li>
                         <li className="mr-2">
-                            <a href="#" className="btn-round-md bg-twiiter">
+                            <a href="#Twitter" className="btn-round-md bg-twiiter">
                                 <Twitter className="font-xs text-white"/>
                             </a>
                         </li>
                         <li className="mr-2">
-                            <a href="#" className="btn-round-md bg-linkedin">
+                            <a href="#Linkedin" className="btn-round-md bg-linkedin">
                                 <Linkedin className="font-xs text-white"/>
                             </a>
                         </li>
                         <li className="mr-2">
-                            <a href="#" className="btn-round-md bg-instagram">
+                            <a href="#Instagram" className="btn-round-md bg-instagram">
                                 <Instagram className="font-xs text-white"/>
                             </a>
                         </li>
                         <li className="mr-2">
-                            <a href="#" className="btn-round-md bg-pinterest">
+                            <a href="#Twitch" className="btn-round-md bg-pinterest">
                                 <Twitch className="font-xs text-white"/>
                             </a>
                         </li>
@@ -56,7 +56,7 @@ const Footer = () => {
                         </div>
                         <div className="col-sm-6 text-right">
                             <p className="float-right copyright-text">
-                                Creado por: <a href="#">Jesen23</a>
+                                Creado por: <a href="#Jesem2">Jesen23</a>
                             </p>
                         </div>
                     </div>
