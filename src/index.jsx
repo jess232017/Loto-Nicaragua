@@ -16,6 +16,7 @@ ReactDOM.render(
             <HashRouter>
                 <App />
             </HashRouter>
+            <ReactQueryDevtools />
         </QueryClientProvider>
     </React.StrictMode>,
     document.getElementById('root')
