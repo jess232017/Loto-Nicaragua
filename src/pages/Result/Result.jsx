@@ -1,5 +1,4 @@
 import React from 'react';
-import { Key } from 'react-feather';
 
 import { useQuery } from 'react-query';
 import ResultList from '../../components/ResultList';
