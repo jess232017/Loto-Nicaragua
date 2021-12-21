@@ -1,5 +1,5 @@
 import React from 'react';
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from 'react-responsive';
 
 const SmallBall = ({ number }) => (
     <section className="stage mini">
