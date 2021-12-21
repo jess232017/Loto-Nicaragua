@@ -3,6 +3,7 @@ import { Key } from 'react-feather';
 
 import { useQuery } from 'react-query';
 import ResultList from '../../components/ResultList';
+import ResultSkeleton from '../../components/ResultSkeleton';
 
 const URL = "https://loto-nic.herokuapp.com";
 
@@ -27,12 +28,22 @@ const Result = ({ name }) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {data?.resultado.map(value => (
-                            <ResultList
-                                key={`${value?.fecha} ${value?.hora}`}
-                                {...value}
-                            />
-                        ))}
+                        {isLoading ?
+                            <>
+                                <ResultSkeleton />
+                                <ResultSkeleton />
+                                <ResultSkeleton />
+                                <ResultSkeleton />
+                                <ResultSkeleton />
+                                <ResultSkeleton />
+                            </> : isError ?
+                                <p>{JSON.stringify(error)}</p>
+                                : data?.resultado.map(value => (
+                                    <ResultList
+                                        key={`${value?.fecha} ${value?.hora}`}
+                                        {...value}
+                                    />
+                                ))}
                     </tbody>
                 </table>
             </div>
