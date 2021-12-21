@@ -110,12 +110,13 @@
 }
 
 .stage.mini{
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
+    min-width: 45px;
 }
 
 .stage.mini .ball .number{
-    font-size: .7rem;
+    font-size: .845rem;
     top: 13px;
 }
 
@@ -209,24 +210,11 @@ thead {
     color: #666
 }
 
-img {
-    width: 40px;
-    height: 40px
-}
-
-.name {
-    display: inline-block
-}
-
 .bg-blue {
     background-color: #EBF5FB;
     border-radius: 8px
 }
 
-.fa-check,
-.fa-minus {
-    color: blue
-}
 
 .bg-blue:hover {
     background-color: #3e64ff;
@@ -234,11 +222,6 @@ img {
     cursor: pointer
 }
 
-.bg-blue:hover .fa-check,
-.bg-blue:hover .fa-minus {
-    background-color: #3e64ff;
-    color: #eee
-}
 
 .table thead th,
 .table td {
@@ -257,14 +240,4 @@ img {
     border-top-right-radius: 0px
 }
 
-#spacing-row {
-    height: 10px
-}
-
-@media(max-width:575px) {
-    .container {
-        width: 125%;
-        padding: 20px 10px
-    }
-}
 

@@ -1,16 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
-    return ( 
+    return (
         <div className="header-wrapper bg-white pt-3 pb-3 shadow-xss">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-9 navbar pt-0 pb-0">
-                        <a href="index.html">
-                            <h1 className="fredoka-font ls-3 fw-700 text-current font-xxl" style={{color: "#fe9431"}}>Loto
+                        <Link to="/">
+                            <h1 className="fredoka-font ls-3 fw-700 text-current font-xxl" style={{ color: "#fe9431" }}>Loto
                                 <span className="d-block font-xsssss ls-1 text-grey-500 open-font ">Te Cambia La Vida</span>
                             </h1>
-                        </a>
+                        </Link>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon" />
                         </button>
@@ -57,5 +58,5 @@ const Header = () => {
 
 
 */
- 
+
 export default Header;

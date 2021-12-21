@@ -15,9 +15,9 @@
     "react-feather": "^2.0.9",
     "react-loading-skeleton": "^3.0.1",
     "react-query": "^3.31.0",
+    "react-responsive": "^9.0.0-beta.5",
     "react-router-dom": "^6.2.1",
     "react-scripts": "4.0.3",
-    "rooks": "^5.8.0",
     "use-react-countdown": "^1.0.4",
     "web-vitals": "^1.1.2"
   },
