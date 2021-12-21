@@ -18,7 +18,7 @@ const Result = ({ name }) => {
     return (
         <div className="container rounded mt-5 bg-white p-md-5">
 
-            <h1 className="fw-400 font-lg mt-4 pb-4">Loto <b>{name}</b></h1>
+            <h1 className="fw-400 font-lg pt-4 pb-4">Loto <b>{name}</b></h1>
             <div className="table-responsive">
                 <table className="table">
                     <thead>
