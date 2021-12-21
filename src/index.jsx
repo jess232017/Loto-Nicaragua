@@ -1,18 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
+import { HashRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
+
+import App from './App';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 const queryClient = new QueryClient();
 
 ReactDOM.render(
     <React.StrictMode>
         <QueryClientProvider client={queryClient}>
-            <App />
-            <ReactQueryDevtools/>
+            <HashRouter>
+                <App />
+            </HashRouter>,
+            <ReactQueryDevtools />
         </QueryClientProvider>
     </React.StrictMode>,
     document.getElementById('root')

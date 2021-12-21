@@ -1,7 +1,12 @@
 import React from 'react'
 
-const LotoCard = ({color, dia, hora, numero}) => {
-    return ( 
+const LotoCard = ({ color, dia, hora, numero }) => {
+
+
+    if (dia === "" && hora === "" && numero === "")
+        return <></>
+
+    return (
         <div className="col">
             <div className={`card mb-2 radius-15 bg-${color}`}>
                 <div className="card-body text-center">
@@ -24,5 +29,5 @@ const LotoCard = ({color, dia, hora, numero}) => {
         </div>
     );
 }
- 
+
 export default LotoCard;
