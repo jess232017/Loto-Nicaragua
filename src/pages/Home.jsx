@@ -37,7 +37,7 @@ const Home = () => {
                             ))
                     }
                 </div>
-                <Link to="results/diaria" className="bg-success p-2 mt-4 d-inline-block text-white fw-700 lh-30 rounded-lg w400 text-center font-xsss ls-3 bg-current">
+                <Link to="results/diaria" className="btn-result bg-success">
                     RESULTADOS ANTERIORES
                 </Link>
             </div>
@@ -64,7 +64,7 @@ const Home = () => {
                             ))
                     }
                 </div>
-                <Link to="results/fechas" className="bg-danger p-2 mt-4 d-inline-block text-white fw-700 lh-30 rounded-lg w400 text-center font-xsss ls-3 bg-current">
+                <Link to="results/fechas" className="btn-result bg-danger">
                     RESULTADOS ANTERIORES
                 </Link>
             </div>
@@ -91,7 +91,7 @@ const Home = () => {
                             ))
                     }
                 </div>
-                <Link to="results/juga-tres" className="bg-secondary p-2 mt-4 d-inline-block text-white fw-700 lh-30 rounded-lg w400 text-center font-xsss ls-3 bg-current">
+                <Link to="results/juga-tres" className="btn-result bg-secondary">
                     RESULTADOS ANTERIORES
                 </Link>
             </div>
@@ -118,7 +118,7 @@ const Home = () => {
                             ))
                     }
                 </div>
-                <Link to="results/premia-dos" className="bg-info p-2 mt-4 d-inline-block text-white fw-700 lh-30 rounded-lg w400 text-center font-xsss ls-3 bg-current">
+                <Link to="results/premia-dos" className="btn-result bg-info">
                     RESULTADOS ANTERIORES
                 </Link>
             </div>
