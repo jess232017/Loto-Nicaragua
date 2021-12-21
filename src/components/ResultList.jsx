@@ -11,26 +11,32 @@ const SmallBall = ({ number }) => (
     </section>
 );
 
-const ResultList = ({ fecha, hora, numero }) => {
+const ResultList = ({ fecha, hora, numero, name }) => {
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 991px)'
     })
 
     return (
         <>
-            <tr className="bg-blue">
+            <tr className={`bg-${name} mini-card`}>
                 <td className="pt-3">
-                    {isDesktopOrLaptop && (
-                        <SmallBall number={numero} />
-                    )}
-                    <div className="pl-lg-5 pl-md-3 pl-1">{fecha}</div>
+                    <div>
+                        {isDesktopOrLaptop && (
+                            <SmallBall number={numero} />
+                        )}
+                        <div className="pl-lg-5 pl-md-3 pl-1 text-white">{fecha}</div>
+                    </div>
                 </td>
-                <td className="pt-3">{hora}</td>
-                <td className="pt-3">{!isDesktopOrLaptop ?
-                    <SmallBall number={numero} />
-                    :
-                    numero
-                }</td>
+                <td className="pt-3 text-white">
+                    {hora}
+                </td>
+                <td className="pt-3 text-white">
+                    {!isDesktopOrLaptop ?
+                        <SmallBall number={numero} />
+                        :
+                        numero
+                    }
+                </td>
             </tr>
             <tr id="spacing-row">
                 <td />

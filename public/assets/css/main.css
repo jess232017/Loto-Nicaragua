@@ -17,27 +17,31 @@
     color: #2b2a2a;
 }
 
-.bg-info {
+.bg-info,
+.bg-premia-dos {
     /*background-color: #6D2C8A!important;
     background-image: linear-gradient(150deg, #671e87 22%, transparent 26%), linear-gradient(28deg, #6a1d8d 10%, transparent 14%),
     linear-gradient(330deg, #6c2c89 30%, transparent 34%);*/
     background-image: linear-gradient( 91.7deg,  rgba(50,25,79,1) -4.3%, #671e87  101.8% );
 }
 
-.bg-success {
+.bg-success,
+.bg-diaria {
     /*background-color: #6bb55f!important;
     background-image: linear-gradient(150deg, #3fac4f 22%, transparent 26%), linear-gradient(28deg, #4aae44 10%, transparent 14%),    linear-gradient(330deg, #6bb55f 30%, transparent 34%);
 */
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, #3cb57a 90% );
 }
 
-.bg-danger {
+.bg-danger,
+.bg-fechas {
    /* background-color: #fd3550!important;
     background-image: linear-gradient(150deg, #e33e54 22%, transparent 26%), linear-gradient(28deg, #e9455b 10%, transparent 14%), 
     linear-gradient(330deg, #ff3f59 30%, transparent 34%);*/
     background: linear-gradient(to right,#ee0979,#ff6a00)!important
 }
-.bg-secondary {
+.bg-secondary,
+.bg-juga-tres {
     /*background-color: #008cff!important;
     background-image: linear-gradient(150deg, #0080ea 22%, transparent 26%), linear-gradient(28deg, #1393fd 10%, transparent 14%),
     linear-gradient(330deg, #1084e3 30%, transparent 34%);*/
@@ -110,19 +114,37 @@
 }
 
 .stage.mini{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     min-width: 45px;
 }
 
 .stage.mini .ball .number{
-    font-size: .845rem;
-    top: 13px;
+    font-size: 1rem;
+    top: 18px;
 }
 
 .stage.mini .ball .ball-shadow{
-    top: -120px;
+    top: -115px;
 }
+
+@media (min-width: 480px) {
+    .stage.mini{
+        width: 50px;
+        height: 50px;
+        min-width: 45px;
+    }
+    
+    .stage.mini .ball .number{
+        font-size: .845rem;
+        top: 13px;
+    }
+    
+    .stage.mini .ball .ball-shadow{
+        top: -120px;
+    }
+}
+
 
 /**/
 @keyframes move-eye-skew {
@@ -231,13 +253,16 @@ thead {
 .table tbody td:first-child {
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
-    display: flex;
-    align-items: center;
 }
 
 .table tbody td:last-child {
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+tr.mini-card td div{
+    display: flex;
+    align-items: center;
 }
 
 a.btn-result{  

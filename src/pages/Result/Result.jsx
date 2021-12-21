@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { useQuery } from 'react-query';
 import ResultList from '../../components/ResultList';
@@ -7,11 +7,13 @@ import ResultSkeleton from '../../components/ResultSkeleton';
 const URL = "https://loto-nic.herokuapp.com";
 
 const Result = ({ name }) => {
-    const { isLoading, isError, error, data } = useQuery("results-diaria", () =>
+    const { isLoading, isError, error, data } = useQuery("results-" + name, () =>
         fetch(URL + "/results/" + name).then((res) => res.json())
     );
 
-    console.log(data)
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="container rounded mt-5 bg-white p-md-5">
@@ -39,6 +41,7 @@ const Result = ({ name }) => {
                                 <p>{JSON.stringify(error)}</p>
                                 : data?.resultado.map(value => (
                                     <ResultList
+                                        name={name}
                                         key={`${value?.fecha} ${value?.hora}`}
                                         {...value}
                                     />
