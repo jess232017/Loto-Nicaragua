@@ -18,16 +18,16 @@ const Header = () => {
                         <div className="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul className="navbar-nav nav-menu float-none text-center">
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#diaria">Diaria</a>
+                                    <Link className="nav-link" to="results/diaria">Diaria</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#fecha">Fechas</a>
+                                    <Link className="nav-link" to="results/fechas">Fechas</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#juga3">Juga 3</a>
+                                    <Link className="nav-link" to="results/juga-tres">Juga 3</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#premia2">Premia 2</a>
+                                    <Link className="nav-link" to="results/premia-dos">Premia 2</Link>
                                 </li>
                             </ul>
                         </div>
