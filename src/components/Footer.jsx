@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive'
 import { Facebook, Instagram, Linkedin, Twitch, Twitter } from 'react-feather';
 
@@ -66,21 +67,21 @@ const Footer = () => {
             </div>
             {isNarrowWidth && (
                 <div className="app-footer border-0 shadow-lg">
-                    <a href="#diaria" className="nav-content-bttn nav-center">
+                    <Link to="results/diaria" className="nav-content-bttn nav-center">
                         <img src="assets/images/diaria.png" alt="user" className="w40 shadow-xss" />
-                    </a>
-                    <a href="#fecha" className="nav-content-bttn">
+                    </Link>
+                    <Link to="results/fechas" className="nav-content-bttn">
                         <img src="assets/images/fechas.png" alt="user" className="w40 shadow-xss" />
-                    </a>
-                    <a href="#juga3" className="nav-content-bttn">
+                    </Link>
+                    <Link to="results/juga-tres" className="nav-content-bttn">
                         <img src="assets/images/juga3.png" alt="user" className="w40 shadow-xss" />
-                    </a>
-                    <a href="#premia2" className="nav-content-bttn">
+                    </Link>
+                    <Link to="results/premia-dos" className="nav-content-bttn">
                         <img src="assets/images/supercombo.png" alt="user" className="w40 shadow-xss" />
-                    </a>
-                    <a href="#grande" className="nav-content-bttn">
+                    </Link>
+                    <Link to="results/premia-dos" className="nav-content-bttn">
                         <img src="assets/images/lagrande.png" alt="user" className="w40 shadow-xss" />
-                    </a>
+                    </Link>
                 </div>
             )}
         </>
